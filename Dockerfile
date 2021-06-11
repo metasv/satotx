@@ -10,6 +10,6 @@ RUN go mod download && \
 
 FROM alpine:latest
 COPY --from=build /build/satotx satotx
-ENV LISTEN 8080
+ENV LISTEN 0.0.0.0:8080
 EXPOSE 8080
 CMD ["./satotx"]
